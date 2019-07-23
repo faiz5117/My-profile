@@ -1,0 +1,14 @@
+*{
+	margin: 0;
+}
+
+.image{
+	margin-top: 8px;
+	margin-left: 8px;
+	border-style: dashed;
+}
+
+.para{
+	margin-left: 100px;
+	margin-top: 20px;
+}

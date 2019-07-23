@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Sayyan M</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../sayyan/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body style="background-image: url(../sayyan/bg.jpg);">
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Sayyan</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav nav nav-pills">
+      <li class="nav-item ">
+        <a class="nav-link active" href="../sayyan/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Aboout Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Pictures</a>
+          <a class="dropdown-item" href="#">Studies</a>
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+ 
+<div class="card" style="width: 18rem;margin-left: 100px;margin-top: 20px;">
+  <img src="../sayyan/my.jpeg" class="card-img-top" alt="Profile Picture">
+  <div class="card-body">
+    <h5 class="card-title">Faizudheen M</h5>
+    <p class="card-text">Hello! This is my personal website.My Instagram ID is given below.</p>
+    <!-- <a href="https://www.instagram.com/___1___9___9___8___" class="btn btn-primary">___1___9___9___8___</a> -->
+    <a href="https://www.instagram.com/___1___9___9___8___" class="fa fa-instagram">___1___9___9___8___</a>
+  </div>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">I'm Here to solve your problems`</p>
+  <hr class="my-4">
+  <p>Contact me for more details.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Contact Us</a>
+</div>
+
+
+<section class="mb-4" style="margin-top: 20px;margin-left: 50px;">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4" style="color: #fff">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5" style="color: #fff">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <!-- <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a> -->
+                <!-- <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a> -->
+                <a class="btn btn-primary" onclick="validateForm()">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+  function validateForm() {
+  var name =  document.getElementById('name').value;
+  if (name == "") {
+      document.getElementById('status').innerHTML = "Name cannot be empty";
+      return false;
+  }
+  var email =  document.getElementById('email').value;
+  if (email == "") {
+      document.getElementById('status').innerHTML = "Email cannot be empty";
+      return false;
+  } else {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(!re.test(email)){
+          document.getElementById('status').innerHTML = "Email format invalid";
+          return false;
+      }
+  }
+  var subject =  document.getElementById('subject').value;
+  if (subject == "") {
+      document.getElementById('status').innerHTML = "Subject cannot be empty";
+      return false;
+  }
+  var message =  document.getElementById('message').value;
+  if (message == "") {
+      document.getElementById('status').innerHTML = "Message cannot be empty";
+      return false;
+  }
+  document.getElementById('status').innerHTML = "Sending...";
+  document.getElementById('contact-form').submit();
+
+  }
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
